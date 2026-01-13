@@ -1,0 +1,9 @@
+{
+    "name": "lontara-dict",
+    "version": "1.0.0",
+    "description": "Kamus Bugis Indonesia with KMP Algorithm",
+    "main": "api/search.js",
+    "dependencies": {
+        "pg": "^8.11.3"
+    }
+}

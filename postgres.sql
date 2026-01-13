@@ -1,0 +1,62 @@
+-- Database: neondb (Postgres)
+-- Kamus Bugis - Indonesia
+
+-- Table structure
+CREATE TABLE IF NOT EXISTS kamus (
+    id SERIAL PRIMARY KEY,
+    bugis VARCHAR(100) NOT NULL,
+    indonesia VARCHAR(255) NOT NULL
+);
+
+-- Insert 50 data kata Bugis-Indonesia
+INSERT INTO kamus (bugis, indonesia) VALUES
+('Ambo', 'Ayah/Bapak'),
+('Indo', 'Ibu/Mama'),
+('Wija', 'Anak'),
+('Silessureng', 'Saudara'),
+('Fadaroane', 'Saudara Laki-Laki'),
+('Fadakkunrei', 'Saudara Perempuan'),
+('Anri', 'Adik'),
+('Daeng', 'Kakak'),
+('Bene', 'Istri'),
+('Lakkai', 'Suami'),
+('Latok', 'Kakek'),
+('Nene', 'Nenek'),
+('Eppo', 'Cucu'),
+('Amure', 'Om'),
+('Furoindo', 'Ibu Tiri'),
+('Furoambo', 'Ayah Tiri'),
+('Manre', 'Makan'),
+('Cemme', 'Mandi'),
+('Aseng', 'Nama'),
+('Arung', 'Bangsawan'),
+('Bangkung', 'Parang'),
+('Cakkindi-kindi', 'Genit'),
+('Care-care', 'Pakaian'),
+('Gora', 'Teriak'),
+('Gattino', 'Cepat'),
+('Idi', 'Kamu'),
+('Iyya', 'Saya'),
+('Orai', 'Ke arah barat'),
+('Ilau', 'Arah Timur'),
+('Janci', 'Janji'),
+('Kadera', 'Kursi'),
+('Kasoro', 'Kasur'),
+('Kantong-kantong', 'Kantongan'),
+('Kebbong', 'Kebun'),
+('Jolo', 'Sebentar'),
+('Mabersa', 'Pemurah'),
+('Malampe', 'Panjang'),
+('Mallajang', 'Menguap'),
+('Masempo', 'Murah'),
+('Masoli', 'Mahal'),
+('Mareso', 'Kelelahan'),
+('Macekka', 'Terang'),
+('Mafettang', 'Gelap'),
+('Masekke', 'Pelit'),
+('Matane', 'Berat'),
+('Maringeng', 'Ringan'),
+('Maela', 'Mau'),
+('Moto', 'Bangun'),
+('Lewu', 'Tiduran'),
+('Purani', 'Sudah');

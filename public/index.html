@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lontara - Kamus Bugis Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">文</div>
+                <span>Lontara</span>
+            </a>
+
+            <div id="nav-search-container" class="nav-search hidden">
+                <span class="nav-search-icon">🔍</span>
+                <form id="nav-search-form" action="index.html" method="GET">
+                    <input type="text" name="q" placeholder="Cari kata..." class="nav-search-input">
+                </form>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Kamus</a>
+                <a href="#" class="nav-link">Sejarah</a>
+                <a href="#" class="nav-link">Tentang</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT CONTAINER -->
+    <div id="app">
+        <!-- Loading State -->
+        <div id="loading" class="hidden" style="display: flex; justify-content: center; padding: 5rem;">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- HOME VIEW -->
+        <div id="home-view" class="hidden">
+            <div class="hero-section">
+                <div class="container">
+                    <h1 class="hero-title">Jelajahi Bahasa <span>Bugis</span></h1>
+                    <p class="hero-subtitle">Terjemahkan kata dari Bahasa Indonesia ke Bahasa Bugis secara instan.
+                        Melestarikan warisan melalui bahasa dan teknologi.</p>
+
+                    <form id="home-search-form" class="hero-search-container">
+                        <span class="search-icon-hero">🔍</span>
+                        <input type="text" id="home-search-input" class="search-input-home"
+                            placeholder="Ketik kata atau tempel teks..." autocomplete="off">
+                        <button type="submit" class="search-btn-home">Terjemahkan</button>
+                    </form>
+
+                    <div class="search-hints">
+                        Coba: <span class="hint-btn" data-word="Salamat">Salamat</span>,
+                        <span class="hint-btn" data-word="Tabe">Tabe'</span>,
+                        <span class="hint-btn" data-word="Aga Kareba">Aga Kareba</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="features-grid">
+                    <!-- Word of the Day -->
+                    <div class="feature-card">
+                        <div class="card-header-badge daily">Harian</div>
+                        <h3 class="card-title">Kata Hari Ini</h3>
+
+                        <div class="wotd-content">
+                            <!-- Placeholder Lontara removed as requested, just using text -->
+                            <div class="word-native" id="wotd-bugis">...</div>
+                            <div class="word-meta-type">Nomina • Budaya</div>
+                        </div>
+
+                        <div class="word-def-box">
+                            "<span id="wotd-indonesia">...</span>"
+                        </div>
+
+                        <a href="#" id="wotd-link" class="card-link">Lihat definisi lengkap <span
+                                style="font-size: 1.2em;">→</span></a>
+                    </div>
+
+                    <!-- History -->
+                    <div class="feature-card history-card">
+                        <div class="card-header-badge history">Sejarah</div>
+                        <h3 class="card-title">Tahukah Anda?</h3>
+                        <div class="history-content">
+                            <p><strong>Suku Bugis</strong> adalah kelompok etnik dengan wilayah asal Sulawesi Selatan.
+                                Penciri utama kelompok etnik ini adalah bahasa dan adat-istiadat.</p>
+                            <p style="margin-top: 1rem;">Masyarakat Bugis memiliki naskah kuno yang ditulis di atas daun
+                                lontar menggunakan <strong>Aksara Lontara</strong>. Salah satu karya sastra terbesar
+                                dunia, <em>I La Galigo</em>, ditulis dalam bahasa Bugis kuno.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESULTS VIEW -->
+        <div id="results-view" class="hidden">
+            <div class="container">
+                <div class="breadcrumbs">
+                    Beranda › Kamus › Hasil untuk "<strong id="result-query"></strong>"
+                </div>
+
+                <div class="layout-grid">
+                    <!-- Sidebar -->
+                    <aside class="sidebar">
+                        <div class="sidebar-header">Kata Serupa</div>
+                        <ul class="sidebar-list" id="sidebar-list">
+                            <!-- Populated by JS -->
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <main id="main-result">
+                        <!-- Populated by JS -->
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="logo-footer">
+                <div class="logo-icon small">文</div>
+                <span>Lontara</span>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Lontara. Menjembatani budaya melalui bahasa.
+            </div>
+            <div class="social-links">
+                <span>Facebook</span>
+                <span>Twitter</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

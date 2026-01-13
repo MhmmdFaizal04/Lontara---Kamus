@@ -1,0 +1,8 @@
+{
+    "name": "lontara/dictionary",
+    "description": "Kamus Bugis Indonesia",
+    "require": {
+        "php": "^8.2",
+        "ext-mysqli": "*"
+    }
+}
