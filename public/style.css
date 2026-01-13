@@ -461,14 +461,32 @@ a {
 /* Mobile Responsive */
 @media (max-width: 768px) {
 
-    /* Navbar: Simplify for mobile */
-    .nav-search,
+    /* Navbar: Adjust for mobile */
     .nav-links {
         display: none;
+        /* Hide menu links only */
     }
 
     .nav-container {
         justify-content: center;
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        gap: 1rem;
+    }
+
+    /* Show search bar on mobile, full width below logo */
+    .nav-search {
+        display: block;
+        width: 100%;
+        margin: 0;
+        order: 2;
+    }
+
+    .nav-search-input {
+        padding: 0.75rem 1rem 0.75rem 2.5rem;
+        /* Larger touch target */
+        font-size: 16px;
+        /* Prevent zoom on iOS */
     }
 
     /* Hero Section */
